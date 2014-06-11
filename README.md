@@ -1,6 +1,13 @@
 # multiaddr - network addresses format
 
-I want a standard way to represent addresses that
+
+## Implementations
+
+- [node-multiaddr](https://github.com/jbenet/node-multiaddr) - stable
+
+## What is multiaddr?
+
+A standard way to represent addresses that
 
 - support any standard network protocols
 - self-describe (include protocols)
@@ -35,5 +42,6 @@ String format:
 /ip6/<ipv6 str addr>/tcp/<tcp int port>
 ```
 
-I might flesh this out later. discuss here:
+Discuss in general here:
 https://github.com/jbenet/random-ideas/issues/11
+
