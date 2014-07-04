@@ -4,6 +4,7 @@
 ## Implementations
 
 - [node-multiaddr](https://github.com/jbenet/node-multiaddr) - stable
+- [go-multiaddr](https://github.com/jbenet/go-multiaddr) - stable
 
 ## What is multiaddr?
 
