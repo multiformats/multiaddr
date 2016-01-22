@@ -43,6 +43,6 @@ Instead, I want something like:
 /ip6/<ipv6 str addr>/tcp/<tcp int port>
 ```
 
-Discuss in general here:
+Originally from here:
 https://github.com/jbenet/random-ideas/issues/11
 
