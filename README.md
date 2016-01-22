@@ -27,7 +27,7 @@ tcp6://[1fff:0:a88:85a3::ac1f]:8001
 
 Instead, I want something like:
 
-Binary format:
+### Binary format:
 
 ```
 (<1 byte proto><n byte addr>)+
@@ -35,7 +35,7 @@ Binary format:
 <1 byte ipv6 code><16 byte ipv6 addr><1 byte tcp code><2 byte tcp port>
 ```
 
-String format:
+### String format:
 
 ```
 (/<addr str code>/<addr str rep>)+
