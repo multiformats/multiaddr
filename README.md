@@ -5,6 +5,7 @@
 
 - [node-multiaddr](https://github.com/jbenet/node-multiaddr) - stable
 - [go-multiaddr](https://github.com/jbenet/go-multiaddr) - stable
+- [hs-multiaddr](https://github.com/basile-henry/hs-multiaddr) - draft
 
 ## What is multiaddr?
 
