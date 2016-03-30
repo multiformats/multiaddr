@@ -7,6 +7,7 @@
 - [go-multiaddr](https://github.com/jbenet/go-multiaddr) - stable
 - [hs-multiaddr](https://github.com/basile-henry/hs-multiaddr) - draft
 - [py-multiaddr](https://github.com/sbuss/py-multiaddr) - alpha
+- [rust-multiaddr](https://github.com/Dignifiedquire/rust-multiaddr) - draft
 
 ## What is multiaddr?
 
