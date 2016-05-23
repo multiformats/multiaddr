@@ -19,15 +19,16 @@
 
 ## What is multiaddr?
 
-A standard way to represent addresses that
+Multiaddr is a standard way to represent addresses that: 
+- Support any standard network protocols.
+- Self-describe (include protocols).
+- Have a binary packed format.
+- Have a nice string representation.
+- Encapsulate well.
 
-- support any standard network protocols
-- self-describe (include protocols)
-- have a binary packed format
-- have a nice string representation
-- encapsulate well
+## Specification
 
-Unsure at this point of the existance of such a spec. The closest I've seen is the string representations like:
+Normally, addresses have been represented using string addresses, like:
 
 ```
 tcp4://127.0.0.1:1234
@@ -36,7 +37,7 @@ ws://1.2.3.4:5678
 tcp6://[1fff:0:a88:85a3::ac1f]:8001
 ```
 
-Instead, I want something like:
+This isn't optimal. Instead, addresses should be formatted so:
 
 ### Binary format:
 
@@ -53,6 +54,27 @@ Instead, I want something like:
 /ip4/<ipv4 str addr>/udp/<udp int port>
 /ip6/<ipv6 str addr>/tcp/<tcp int port>
 ```
+
+### Protocols
+
+-----------------------
+| code | size |	name  |
+|------|------|-------|
+| 4    | 32	  | ip4   |
+| 6    | 16	  | tcp   |
+| 17   | 16   |	udp   |
+| 33   | 168  | dccp  |
+| 41   | 128  |	ip6   |
+| 132  | 	16  |	sctp  |
+| 301  | 0    |	udt   |
+| 302  | 0    |	utp   |
+| 421  | V    |	ipfs  |
+| 480  | 0    |	http  |
+| 443  | 0    |	https |
+| 477  | 0	  |	ws    |
+| 444  | 10		| onion	|
+| 275	 | 0		| libp2p-webrtc-star |
+-----------------------
 
 Originally from here:
 https://github.com/jbenet/random-ideas/issues/11
