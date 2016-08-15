@@ -1,14 +1,17 @@
-# multiaddr - network addresses format
+# multiaddr
 
+> The network addresses multiformat
 
-## Implementations
+## Table of Contents
 
-- [js-multiaddr](https://github.com/multiformats/js-multiaddr) - stable
-- [go-multiaddr](https://github.com/multiformats/go-multiaddr) - stable
-- [java-multiaddr](https://github.com/ipfs/java-ipfs-api) - stable
-- [hs-multiaddr](https://github.com/basile-henry/hs-multiaddr) - draft
-- [py-multiaddr](https://github.com/sbuss/py-multiaddr) - alpha
-- [rust-multiaddr](https://github.com/multiformats/rust-multiaddr) - draft
+- [Table of Contents](#table-of-contents)
+- [What is multiaddr?](#what-is-multiaddr)
+  - [Binary format:](#binary-format)
+  - [String format:](#string-format)
+- [Implementations](#implementations)
+- [Maintainer](#maintainer)
+- [Contribute](#contribute)
+- [License](#license)
 
 ## What is multiaddr?
 
@@ -50,3 +53,25 @@ Instead, I want something like:
 Originally from here:
 https://github.com/jbenet/random-ideas/issues/11
 
+## Implementations
+
+- [js-multiaddr](https://github.com/multiformats/js-multiaddr) - stable
+- [go-multiaddr](https://github.com/multiformats/go-multiaddr) - stable
+- [java-multiaddr](https://github.com/ipfs/java-ipfs-api) - stable
+- [hs-multiaddr](https://github.com/basile-henry/hs-multiaddr) - draft
+- [py-multiaddr](https://github.com/sbuss/py-multiaddr) - alpha
+- [rust-multiaddr](https://github.com/multiformats/rust-multiaddr) - draft
+
+## Maintainer
+
+Captain: [@jbenet](https://github.com/jbenet).
+
+## Contribute
+
+Contributions welcome. Please check out [the issues](https://github.com/multiformats/multiaddr/issues).
+
+Check out our [contributing document](https://github.com/multiformats/multiformats/blob/master/contributing.md) for more information on how we work, and about contributing in general. Please be aware that all interactions related to multiformats are subject to the IPFS [Code of Conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md).
+
+## License
+
+[MIT](LICENSE) © Protocol Labs Inc.
