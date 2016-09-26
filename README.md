@@ -57,24 +57,7 @@ This isn't optimal. Instead, addresses should be formatted so:
 
 ### Protocols
 
------------------------
-| code | size |	name  |
-|------|------|-------|
-| 4    | 32	  | ip4   |
-| 6    | 16	  | tcp   |
-| 17   | 16   |	udp   |
-| 33   | 168  | dccp  |
-| 41   | 128  |	ip6   |
-| 132  | 	16  |	sctp  |
-| 301  | 0    |	udt   |
-| 302  | 0    |	utp   |
-| 421  | V    |	ipfs  |
-| 480  | 0    |	http  |
-| 443  | 0    |	https |
-| 477  | 0	  |	ws    |
-| 444  | 10		| onion	|
-| 275	 | 0		| libp2p-webrtc-star |
------------------------
+See [protocols.csv](protocols.csv).
 
 Originally from here:
 https://github.com/jbenet/random-ideas/issues/11
