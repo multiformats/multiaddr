@@ -8,6 +8,7 @@ code,	size,	name
 301,	0,	udt
 302,	0,	utp
 421,	V,	ipfs
+432,	V,	p2p
 480,	0,	http
 443,	0,	https
 444,	96,	onion
