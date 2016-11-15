@@ -42,7 +42,7 @@ This isn't optimal. Instead, addresses should be formatted so:
 ### Binary format:
 
 ```
-(<1 byte proto><n byte addr>)+
+(varint proto><n byte addr>)+
 <1 byte ipv4 code><4 byte ipv4 addr><1 byte udp code><2 byte udp port>
 <1 byte ipv6 code><16 byte ipv6 addr><1 byte tcp code><2 byte tcp port>
 ```
