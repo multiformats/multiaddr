@@ -71,6 +71,7 @@ https://github.com/jbenet/random-ideas/issues/11
 - [py-multiaddr](https://github.com/sbuss/py-multiaddr) - alpha
 - [rust-multiaddr](https://github.com/multiformats/rust-multiaddr) - draft
 - [cs-multiaddress](https://github.com/tabrath/cs-multiaddress) - alpha
+- [net-ipfs-core](https://github.com/richardschneider/net-ipfs-core) - stable
 
 ## Maintainers
 
