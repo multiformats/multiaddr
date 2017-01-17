@@ -1,9 +1,11 @@
-code,	size,	name
+code,	size,	name, comment
 4,	32,	ip4
 6,	16,	tcp
 17,	16,	udp
 33,	16,	dccp
 41,	128,	ip6
+53,  V, dns, reserved for future use
+531, V, dns-exp, experimental /dns
 132,	16,	sctp
 301,	0,	udt
 302,	0,	utp
@@ -11,5 +13,8 @@ code,	size,	name
 480,	0,	http
 443,	0,	https
 444,	96,	onion
+450,  V,  relay, reserver for future use (preliminary name)
+451,  V,  relay-exp, experimental /relay
 477, 0, ws
+478, 0, wss
 275, 0, libp2p-webrtc-star
