@@ -14,15 +14,14 @@ code,	size,	name,	comment
 420,	V,	p2p,	preferred over /ipfs
 421,	V,	ipfs,	equal to /p2p
 444,	96,	onion
-450,	V,	relay,	reserved for near-future use
 480,	0,	http
 443,	0,	https
 477,	0,	ws
 478,	0,	wss
 275,	0,	libp2p-webrtc-star
 276,	0,	libp2p-webrtc-direct
+290,	V,	libp2p-circuit-relay
 
 16383,	V,	exp-dns,	experimental /dns
 16382,	V,	exp-dns4,	experimental /dns4
 16381,	V,	exp-dns6,	experimental /dns6
-16380,	V,	exp-relay,	experimental /relay
