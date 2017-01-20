@@ -1,15 +1,27 @@
-code,	size,	name
+code,	size,	name,	comment
 4,	32,	ip4
 6,	16,	tcp
 17,	16,	udp
 33,	16,	dccp
 41,	128,	ip6
+53,	V,	dns,	reserved for near-future use
+54,	V,	dns4,	reserved for near-future use
+55,	V,	dns6,	reserved for near-future use
 132,	16,	sctp
 301,	0,	udt
 302,	0,	utp
-421,	V,	ipfs
+400,	V,	unix
+420,	V,	p2p,	preferred over /ipfs
+421,	V,	ipfs,	equal to /p2p
+444,	96,	onion
 480,	0,	http
 443,	0,	https
-444,	96,	onion
-477, 0, ws
-275, 0, libp2p-webrtc-star
+477,	0,	ws
+478,	0,	wss
+275,	0,	libp2p-webrtc-star
+276,	0,	libp2p-webrtc-direct
+290,	V,	libp2p-circuit-relay
+
+16383,	V,	exp-dns,	experimental /dns
+16382,	V,	exp-dns4,	experimental /dns4
+16381,	V,	exp-dns6,	experimental /dns6
