@@ -67,7 +67,7 @@ https://github.com/jbenet/random-ideas/issues/11
 - [js-multiaddr](https://github.com/multiformats/js-multiaddr) - stable
 - [go-multiaddr](https://github.com/multiformats/go-multiaddr) - stable
 - [java-multiaddr](https://github.com/multiformats/java-multiaddr) - stable
-- [hs-multiaddr](https://github.com/basile-henry/hs-multiaddr) - draft
+- [haskell-multiaddr](https://github.com/MatrixAI/haskell-multiaddr) - stable
 - [py-multiaddr](https://github.com/sbuss/py-multiaddr) - alpha
 - [rust-multiaddr](https://github.com/multiformats/rust-multiaddr) - draft
 - [cs-multiaddress](https://github.com/tabrath/cs-multiaddress) - alpha
