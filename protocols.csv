@@ -20,4 +20,5 @@ code,	size,	name,	comment
 478,	0,	wss,
 275,	0,	libp2p-webrtc-star,
 276,	0,	libp2p-webrtc-direct,
+278,	0,	libp2p-websocket-star,
 290,	0,	p2p-circuit,
