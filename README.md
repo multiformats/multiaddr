@@ -42,7 +42,7 @@ This isn't optimal. Instead, addresses should be formatted so:
 ### Binary format:
 
 ```
-(varint proto><n byte addr>)+
+(<varint proto><n byte addr>)+
 <1 byte ipv4 code><4 byte ipv4 addr><1 byte udp code><2 byte udp port>
 <1 byte ipv6 code><16 byte ipv6 addr><1 byte tcp code><2 byte tcp port>
 ```
@@ -67,9 +67,9 @@ https://github.com/jbenet/random-ideas/issues/11
 - [js-multiaddr](https://github.com/multiformats/js-multiaddr) - stable
 - [go-multiaddr](https://github.com/multiformats/go-multiaddr) - stable
 - [java-multiaddr](https://github.com/multiformats/java-multiaddr) - stable
-- [hs-multiaddr](https://github.com/basile-henry/hs-multiaddr) - draft
+- [haskell-multiaddr](https://github.com/MatrixAI/haskell-multiaddr) - stable
 - [py-multiaddr](https://github.com/sbuss/py-multiaddr) - alpha
-- [rust-multiaddr](https://github.com/multiformats/rust-multiaddr) - draft
+- [rust-multiaddr](https://github.com/multiformats/rust-multiaddr) - beta
 - [cs-multiaddress](https://github.com/tabrath/cs-multiaddress) - alpha
 - [net-ipfs-core](https://github.com/richardschneider/net-ipfs-core) - stable
 

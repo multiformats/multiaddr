@@ -1,24 +1,24 @@
 code,	size,	name,	comment
-4,	32,	ip4
-6,	16,	tcp
-17,	16,	udp
-33,	16,	dccp
-41,	128,	ip6
+4,	32,	ip4,
+6,	16,	tcp,
+17,	16,	udp,
+33,	16,	dccp,
+41,	128,	ip6,
 53,	V,	dns,	reserved
-54,	V,	dns4
-55,	V,	dns6
-132,	16,	sctp
-81,	0,	quic
-301,	0,	udt
-302,	0,	utp
-400,	V,	unix
+54,	V,	dns4,
+55,	V,	dns6,
+81,	0,	quic,
+132,	16,	sctp,
+301,	0,	udt,
+302,	0,	utp,
+400,	V,	unix,
 420,	V,	p2p,	preferred over /ipfs
 421,	V,	ipfs,	equal to /p2p
-444,	96,	onion
-480,	0,	http
-443,	0,	https
-477,	0,	ws
-478,	0,	wss
-275,	0,	libp2p-webrtc-star
-276,	0,	libp2p-webrtc-direct
-290,	0,	p2p-circuit
+444,	96,	onion,
+480,	0,	http,
+443,	0,	https,
+477,	0,	ws,
+478,	0,	wss,
+275,	0,	libp2p-webrtc-star,
+276,	0,	libp2p-webrtc-direct,
+290,	0,	p2p-circuit,
