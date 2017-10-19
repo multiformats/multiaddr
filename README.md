@@ -95,14 +95,48 @@ but only with multiaddr do we have a way of consistently addressing these networ
 Multiaddr and all other multiformats use unsigned varints (uvarint).
 Read more about it in [multiformats/unsigned-varint](https://github.com/multiformats/unsigned-varint).
 
+Rules for protocols:
+- MUST know how many characters to read
+- MUST NOT look at outer nor inner encapsulations
+- In string representations:
+  - `protoName` MUST be preceded by forward-slash
+  - `value` MUST be preceded by forward-slash
+
 
 ### Encoding
 
-TODO: specify the encoding (byte-array to string) procedure
+Encoding is a byte-array to string conversion.
+
+- Given `$bytes`, a binary representation of a multiaddr that we'll encode from
+- Let `$out` be a string representation of a multiaddr that we'll encode into
+- While `length($bytes) > 0`
+  - Shift a VarInt from `$bytes` into `$code`
+  - Look up the multiaddr protocol with code `$code` and store it in `$proto`
+    - Return `no such multiaddr protocol` error if protocol doesn't exist
+  - Call the `encode()` function of `$proto`, passing `$bytes`, which returns:
+    - a string that we'll append to `$out`
+- Return `$out`
+
 
 ### Decoding
 
-TODO: specify the decoding (string to byte-array) procedure
+Decoding is a string to byte-array conversion.
+
+- Given `$str`, a string representation of a multiaddr that we'll decode from
+- Let `$out` be a binary representation of a multiaddr that we'll decode into
+- Let `$pos` be an integer that keeps track of our current position within `$str`
+- While `$pos < length($str)`
+  - TODO $pos here is unclear - maybe pass the whole "/name/value" part to decode()
+  - Increment `$pos` by `1` to skip the leading forward-slash (`/`)
+  - Read characters from `$str` into `$name` until another forward-slash is encountered
+  - Look up the multiaddr protocol with name `$name` (e.g. "ip4" or "http") and store it in `$proto`
+    - Return `no such multiaddr protocol` error if protocol doesn't exist
+  - Increment `$pos` by `1` to skip the forward-slash
+  - Call the `decode()` function of `$proto`, passing `$str` and `$pos`, which returns:
+    - a byte-array that we'll append to `$out`
+    - an integer `$skip` counting the number of bytes that `decode()` has read
+  - Increment `$pos` by `length($name) + $skip + 1`
+- Return `$out`
 
 
 ## Protocols
