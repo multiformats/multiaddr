@@ -38,7 +38,7 @@ Multiaddr solves these problems by modelling network addresses as arbitrary enca
 
 - Multiaddrs support addresses for any network protocol.
 - Multiaddrs are self-describing.
-- Multiaddrs conform to a simple syntax, making them trivial to parse and construct.
+- Multiaddrs conform to a path syntax, making them work nicely with path-addressed systems such as Plan9.
 - Multiaddrs have human-readable and efficient machine-readable representations.
 - Multiaddrs encapsulate well, allowing trivial wrapping and unwrapping of encapsulation layers.
 
@@ -60,6 +60,7 @@ Multiaddr was originally [thought up by @jbenet](https://github.com/jbenet/rando
 - TODO: case study: http proxying
 - TODO: case study: multi-hop circuit relay
 - TODO: case study: protocol migrations (e.g. ip4/ip6, 4in6, 6in4)
+- TODO: case study: python twisted ipv6 addresses
 
 
 ### Encapsulation based on context
@@ -83,7 +84,6 @@ For example you could use HTTP proxying or SOCKS proxying, or use domain frontin
 This kind of proxying is of course possible without multiaddr,
 but only with multiaddr do we have a way of consistently addressing these networking constructions.
 
-
 ## Specification
 
 - Human-readable multiaddr: `(/<protoName string>/<value string>)+`
@@ -98,11 +98,12 @@ Read more about it in [multiformats/unsigned-varint](https://github.com/multifor
 
 ### Encoding
 
-TODO: specify the encoding (byte-array to string) procedure
+TODO: specify the encoding (string to byte-array) procedure
+
 
 ### Decoding
 
-TODO: specify the decoding (string to byte-array) procedure
+TODO: specify the decoding (byte-array to string) procedure
 
 
 ## Protocols
@@ -110,29 +111,27 @@ TODO: specify the decoding (string to byte-array) procedure
 See [protocols.csv](protocols.csv) for a list of protocol codes and names,
 and [protocols/](protocols/) for specifications of the currently supported protocols.
 
-TODO: most of these are way underspecified
+Also see [protocols.csv](protocols.csv).
 
-- /ip4, /ip6
-- /dns4, /dns6
-- /dnsaddr
-- /tcp
-- /udp
-- /utp
-- /tls
-- /ws, /wss
-- /ipfs
-- /p2p-circuit
-- /p2p-webrtc-star, /p2p-webrtc-direct
-- /p2p-websocket-star
-- /onion
+- [/ip4, /ip6](protocols/ip46.md)
+- [/dns4, /dns6](protocols/dns46.md)
+- [/dnsaddr](protocols/dnsaddr.md)
+- [/tcp](protocols/tcp.md)
+- [/udp](protocols/udp.md)
+- [/utp](protocols/utp.md)
+- [/ws, /wss](protocols/ws.md)
+- [/p2p, /ipfs](protocols/p2p.md)
+- [/p2p-circuit](protocols/p2p-circuit.md)
+- [/libp2p-webrtc-star, /libp2p-webrtc-direct](protocols/p2p-webrtc.md)
+- [/onion](protocols/onion.md)
 
 
 ## Implementations
 
 - [js-multiaddr](https://github.com/multiformats/js-multiaddr) - stable
 - [go-multiaddr](https://github.com/multiformats/go-multiaddr) - stable
-  - [go-multiaddr-dns](https://github.com/multiformats/go-multiaddr-dns)
-  - [go-multiaddr-net](https://github.com/multiformats/go-multiaddr-net)
+  - [go-multiaddr-net](https://github.com/multiformats/go-multiaddr-net) - integration with Go's net package
+  - [go-multiaddr-dns](https://github.com/multiformats/go-multiaddr-dns) - resolution of /dns4, /dns6, /dnsaddr multiaddrs
 - [java-multiaddr](https://github.com/multiformats/java-multiaddr) - stable
 - [haskell-multiaddr](https://github.com/MatrixAI/haskell-multiaddr) - stable
 - [py-multiaddr](https://github.com/sbuss/py-multiaddr) - alpha

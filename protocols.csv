@@ -1,4 +1,4 @@
-code,	size,	name,	comment
+code,	size,	name,	comment, spec
 4,	32,	ip4,
 6,	16,	tcp,
 17,	16,	udp,
