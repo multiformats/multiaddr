@@ -130,6 +130,7 @@ TODO: most of these are way underspecified
 ## Implementations
 
 - [js-multiaddr](https://github.com/multiformats/js-multiaddr) - stable
+- [kotlin-multiaddr](https://github.com/changjiashuai/kotlin-multiaddr) - stable
 - [go-multiaddr](https://github.com/multiformats/go-multiaddr) - stable
   - [go-multiaddr-dns](https://github.com/multiformats/go-multiaddr-dns)
   - [go-multiaddr-net](https://github.com/multiformats/go-multiaddr-net)
