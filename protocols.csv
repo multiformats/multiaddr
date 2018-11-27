@@ -17,8 +17,8 @@ code,	size,	name,		comment
 421,	V,	ipfs,		backwards compatibility; equivalent to /p2p
 444,	96,	onion,
 445,    296, onion3
-446,    276, garlict
-447,    276, garlicu
+446,    3112, garlict
+447,    3112, garlicu
 460,	0,	quic,
 480,	0,	http,
 443,	0,	https,
