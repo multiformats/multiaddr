@@ -18,7 +18,6 @@ code,	size,	name,		comment
 444,	96,	onion,
 445,    296, onion3
 446,    3096, garlic64
-447,    256, garlic32
 460,	0,	quic,
 480,	0,	http,
 443,	0,	https,
