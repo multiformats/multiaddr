@@ -15,6 +15,7 @@ code,	size,	name,		comment
 400,	V,	unix,
 421,	V,	p2p,		preferred over /ipfs
 421,	V,	ipfs,		backwards compatibility; equivalent to /p2p
+422,	V,	swarm,
 444,	96,	onion,
 460,	0,	quic,
 480,	0,	http,

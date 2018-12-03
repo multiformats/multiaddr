@@ -125,6 +125,7 @@ TODO: most of these are way underspecified
 - /p2p-webrtc-star, /p2p-webrtc-direct
 - /p2p-websocket-star
 - /onion
+- /swarm
 
 
 ## Implementations
