@@ -18,9 +18,6 @@
 - [Contribute](#contribute)
 - [License](#license)
 
-Captain: [@lgierth](https://github.com/lgierth)
-
-
 ## Introduction
 
 Multiaddr aims to make network addresses future-proof, composable, and efficient.
