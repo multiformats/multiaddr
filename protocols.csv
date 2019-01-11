@@ -24,6 +24,7 @@ code,	size,	name,	comment
 477,	0,	ws,
 478,	0,	wss,
 479,	0,	p2p-websocket-star,
+277,	0,	p2p-stardust,
 275,	0,	p2p-webrtc-star,
 276,	0,	p2p-webrtc-direct,
 290,	0,	p2p-circuit,
