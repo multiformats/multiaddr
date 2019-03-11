@@ -136,7 +136,7 @@ TODO: most of these are way underspecified
   - [go-multiaddr-net](https://github.com/multiformats/go-multiaddr-net)
 - [java-multiaddr](https://github.com/multiformats/java-multiaddr) - stable
 - [haskell-multiaddr](https://github.com/MatrixAI/haskell-multiaddr) - stable
-- [py-multiaddr](https://github.com/sbuss/py-multiaddr) - alpha
+- [py-multiaddr](https://github.com/multiformats/py-multiaddr) - stable
 - [rust-multiaddr](https://github.com/multiformats/rust-multiaddr) - beta
 - [cs-multiaddress](https://github.com/multiformats/cs-multiaddress) - alpha
 - [net-ipfs-core](https://github.com/richardschneider/net-ipfs-core) - stable
