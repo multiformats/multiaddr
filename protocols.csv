@@ -29,4 +29,8 @@ code,	size,	name,	comment
 275,	0,	p2p-webrtc-star,
 276,	0,	p2p-webrtc-direct,
 290,	0,	p2p-circuit,
-777,	V, memory, in memory transport for self-dialing and testing; arbitrary 
+510,	2,	bob
+515,	2,	sam1
+516,	2,	sam2
+517,	3,	sam3
+777,	V,	memory,	in memory transport for self-dialing and testing; arbitrary 
