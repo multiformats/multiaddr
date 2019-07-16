@@ -19,6 +19,8 @@ code,	size,	name,	comment
 445,	296,	onion3,
 446,	V,	garlic64,
 447,	V,	garlic32,
+448,	0,	i2p-streaming, an I2P tcp like
+449,	0,	i2p-datagrams, an I2P udp like
 460,	0,	quic,
 480,	0,	http,
 443,	0,	https,
@@ -30,7 +32,7 @@ code,	size,	name,	comment
 276,	0,	p2p-webrtc-direct,
 290,	0,	p2p-circuit,
 510,	V,	bob,
-515,	V,	sam, this type is an abstraction of all version of sam and should try the latest one to the oldest one until he find one working (or use any autonegociation protocol)
+515,	V,	sam, this type is an abstraction of all version of sam, the transport must find one working
 516,	V,	sam1,
 517,	V,	sam2,
 518,	V,	sam3,
