@@ -30,3 +30,4 @@ code,	size,	name,	comment
 276,	0,	p2p-webrtc-direct,
 290,	0,	p2p-circuit,
 777,	V, memory, in memory transport for self-dialing and testing; arbitrary 
+4096,	V,	zeronet
