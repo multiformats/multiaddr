@@ -140,6 +140,7 @@ TODO: most of these are way underspecified
 - [rust-multiaddr](https://github.com/multiformats/rust-multiaddr) - beta
 - [cs-multiaddress](https://github.com/multiformats/cs-multiaddress) - alpha
 - [net-ipfs-core](https://github.com/richardschneider/net-ipfs-core) - stable
+- [swift-multiaddr](https://github.com/lukereichold/swift-multiaddr) - stable
 
 TODO: reconsider these alpha/beta/stable labels
 
