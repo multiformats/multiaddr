@@ -5,9 +5,9 @@ code,	size,	name,	comment
 33,	16,	dccp,
 41,	128,	ip6,
 42,	V,	ip6zone,	rfc4007 IPv6 zone
-53,	V,	dns,	reserved
-54,	V,	dns4,
-55,	V,	dns6,
+53,	V,	dns,  domain name resolvable to both IPv6 and IPv4 addresses
+54,	V,	dns4, domain name resolvable only to IPv4 addresses
+55,	V,	dns6, domain name resolvable only to IPv6 addresses
 56,	V,	dnsaddr,
 132,	16,	sctp,
 301,	0,	udt,
