@@ -8,7 +8,7 @@ Example:
 
 `/dnsaddr/bootstrap.libp2p.io` would result in a DNS TXT record query for `_dnsaddr.bootstrap.libp2p.io`.
 
-```console
+```sh
 # TXT records for `_dnsaddr.bootstrap.libp2p.io`:
 dnsaddr=/dnsaddr/sjc-1.bootstrap.libp2p.io/tcp/4001/ipfs/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN
 dnsaddr=/dnsaddr/ams-2.bootstrap.libp2p.io/tcp/4001/ipfs/QmbLHAnMoJPWSCR5Zhtx6BHJX9KiKNN6tpvbUcqanj75Nb
@@ -17,7 +17,7 @@ dnsaddr=/dnsaddr/ams-2.bootstrap.libp2p.io/tcp/4001/ipfs/QmbLHAnMoJPWSCR5Zhtx6BH
 
 ...which further resolve to:
 
-```console
+```sh
 # TXT records for `_dnsaddr.sjc-1.bootstrap.libp2p.io`:
 dnsaddr=/ip6/2604:1380:1000:6000::1/tcp/4001/ipfs/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN
 dnsaddr=/ip4/147.75.69.143/tcp/4001/ipfs/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN
@@ -29,7 +29,7 @@ dnsaddr=/ip6/2604:1380:2000:7a00::1/tcp/4001/ipfs/QmbLHAnMoJPWSCR5Zhtx6BHJX9KiKN
 
 So, `/dnsaddr/bootstrap.libp2p.io` resolves to (at least) four multiaddrs:
 
-```console
+```
 /ip6/2604:1380:1000:6000::1/tcp/4001/ipfs/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN
 /ip4/147.75.69.143/tcp/4001/ipfs/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN
 
