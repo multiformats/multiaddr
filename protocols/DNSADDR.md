@@ -4,7 +4,7 @@
 
 To resolve a `dnsaddr` multiaddr, the domain name in the value section must first be prefixed with `_dnsaddr.`. Then a DNS query to lookup TXT records for the domain must be made. There may be multiple DNS TXT records for the domain. Valid `dnsaddr` TXT records begin with `dnsaddr=`, followed by a single multiaddr. Recursive lookups are allowed.
 
-Example:
+## Example
 
 `/dnsaddr/bootstrap.libp2p.io` would result in a DNS TXT record query for `_dnsaddr.bootstrap.libp2p.io`.
 
