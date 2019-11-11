@@ -6,12 +6,10 @@ To resolve a `dnsaddr` multiaddr, the domain name in the value section must firs
 
 Example:
 
-`/dnsaddr/bootstrap.libp2p.io`
-
-Resolving TXT records for this multiaddr yields:
+`/dnsaddr/bootstrap.libp2p.io` would result in a DNS TXT record query for `_dnsaddr.bootstrap.libp2p.io`.
 
 ```console
-# TXT records for `/dnsaddr/bootstrap.libp2p.io`:
+# TXT records for `_dnsaddr.bootstrap.libp2p.io`:
 dnsaddr=/dnsaddr/sjc-1.bootstrap.libp2p.io/tcp/4001/ipfs/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN
 dnsaddr=/dnsaddr/ams-2.bootstrap.libp2p.io/tcp/4001/ipfs/QmbLHAnMoJPWSCR5Zhtx6BHJX9KiKNN6tpvbUcqanj75Nb
 # ...
@@ -20,11 +18,11 @@ dnsaddr=/dnsaddr/ams-2.bootstrap.libp2p.io/tcp/4001/ipfs/QmbLHAnMoJPWSCR5Zhtx6BH
 ...which further resolve to:
 
 ```console
-# TXT records for `/dnsaddr/sjc-1.bootstrap.libp2p.io/tcp/4001/ipfs/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN`:
+# TXT records for `_dnsaddr.sjc-1.bootstrap.libp2p.io`:
 dnsaddr=/ip6/2604:1380:1000:6000::1/tcp/4001/ipfs/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN
 dnsaddr=/ip4/147.75.69.143/tcp/4001/ipfs/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN
 
-# TXT records for `/dnsaddr/ams-2.bootstrap.libp2p.io/tcp/4001/ipfs/QmbLHAnMoJPWSCR5Zhtx6BHJX9KiKNN6tpvbUcqanj75Nb`:
+# TXT records for `_dnsaddr.ams-2.bootstrap.libp2p.io`:
 dnsaddr=/ip4/147.75.83.83/tcp/4001/ipfs/QmbLHAnMoJPWSCR5Zhtx6BHJX9KiKNN6tpvbUcqanj75Nb
 dnsaddr=/ip6/2604:1380:2000:7a00::1/tcp/4001/ipfs/QmbLHAnMoJPWSCR5Zhtx6BHJX9KiKNN6tpvbUcqanj75Nb
 ```
