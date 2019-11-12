@@ -37,11 +37,11 @@ So, `/dnsaddr/bootstrap.libp2p.io` resolves to (at least) four multiaddrs:
 /ip6/2604:1380:2000:7a00::1/tcp/4001/ipfs/QmbLHAnMoJPWSCR5Zhtx6BHJX9KiKNN6tpvbUcqanj75Nb
 ```
 
-## Suffix matching
+## Suffix matching
 
-A `/dnsaddr` may specify additional nested protocols that must match when resolving the txt record. When the TXT records are resolved, items whose suffix doesn't match the provided one are dropped.
+A `/dnsaddr` may specify additional nested protocols that must match when resolving the TXT record. When the TXT records are resolved, items whose suffix doesn't match the provided one are dropped.
 
-The [default IPFS bootstrap list](https://github.com/ipfs/go-ipfs-config/blob/ed60afb72517463df516d7d6ea0a98fc07369024/bootstrap_peers.go#L22) contains 4 dnsaddrs for the domain `bootstrap.libp2p.io`, and each one specifies has a different Peer ID. The first one is:
+The [default IPFS bootstrap list](https://github.com/ipfs/go-ipfs-config/blob/v0.0.11/bootstrap_peers.go#L22-L25) contains 4 dnsaddrs for the domain `bootstrap.libp2p.io`, and each one specifies has a different Peer ID. The first one is:
 
 ```go
 "/dnsaddr/bootstrap.libp2p.io/ipfs/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN",
@@ -57,7 +57,7 @@ $ dig +short txt _dnsaddr.bootstrap.libp2p.io
 "dnsaddr=/dnsaddr/ewr-1.bootstrap.libp2p.io/tcp/4001/ipfs/QmQCU2EcMqAqQPR2i9bChDtGNJchTbq5TbXJJ16u19uLTa"
 ```
 
-check each record to find ones where the suffix matches the one specified on the multiaddr: `/ipfs/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN` which leaves us with just:
+Check each record to find ones where the suffix matches the one specified on the multiaddr: `/ipfs/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN` which leaves us with just:
 
 ```
 /dnsaddr/sjc-1.bootstrap.libp2p.io/tcp/4001/ipfs/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN
