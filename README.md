@@ -141,6 +141,7 @@ TODO: most of these are way underspecified
 - [cs-multiaddress](https://github.com/multiformats/cs-multiaddress) - alpha
 - [net-ipfs-core](https://github.com/richardschneider/net-ipfs-core) - stable
 - [swift-multiaddr](https://github.com/lukereichold/swift-multiaddr) - stable
+- [elixir-multiaddr](https://github.com/aratz-lasa/ex_multiaddr) - alpha
 
 TODO: reconsider these alpha/beta/stable labels
 
