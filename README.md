@@ -135,22 +135,22 @@ these kinds of strings.
 
 Protocols using the `fspath` encoding must not be shared between different hosts.
 
-#### `idna`
+#### `domain`
 
-Encodes the given Unicode representation according to IDNA-2008 ([RFC 5890](https://tools.ietf.org/html/rfc5890)) conventions using the [UTS-46](https://tools.ietf.org/html/rfc5890) input normalization and processing rules.
+Encodes the given Unicode representation to the UTF-8 character encoding ([RFC 3629 Section 3](https://tools.ietf.org/html/rfc3629#section-3)), while using the [UTS-46 / RFC 5890](https://tools.ietf.org/html/rfc5890) input normalization and processing rules for canonicalization.
 
- * String → Binary:
-    1. Normalize and validate the given input string according to [UTS-46 Section 4 (Processing)](https://www.unicode.org/reports/tr46/#Processing) and [UTS-46 Section 4.1 (Validity Criteria)](https://www.unicode.org/reports/tr46/#Validity_Criteria) with the following parameters:
+* String → Binary:
+   1. If feasible, normalize and validate the given input string according to [UTS-46 Section 4 (Processing)](https://www.unicode.org/reports/tr46/#Processing) and [UTS-46 Section 4.1 (Validity Criteria)](https://www.unicode.org/reports/tr46/#Validity_Criteria) with the following parameters:
        * UseSTD3ASCIIRules = true
        * CheckHyphens = true
        * CheckBidi = true
        * CheckJoiners = true
        * Transitional_Processing = false
-    2. Convert the Unicode string to ASCII using the [UTS-46 Section 4.2 (ToASCII)](https://www.unicode.org/reports/tr46/#ToASCII) algorithm steps 2–6 with parameter *VerifyDnsLength* set to *true* and return the result.
- * Binary → String:  
-   Convert the ASCII text string to Unicode according to the rules of [UTS-46 Section 4.3 (ToUnicode)](https://www.unicode.org/reports/tr46/#ToUnicode) using the same parameters as in step 1 of the *String → Binary* algorithm.
+   2. Convert the Unicode string to the UTF-8 character encoding as per [RFC 3629 Section 3 §4](https://tools.ietf.org/html/rfc3629#section-3).
+* Binary → String:  
+  Convert the UTF-8 encoded binary string to Unicode according to the rules of [RFC 3629 Section 3 §6](https://tools.ietf.org/html/rfc3629#page-5).
 
-Examples of libraries for performing the above steps include the [Python idna](https://pypi.org/project/idna/) library.
+Examples of libraries for performing the above normalization step include the `idna.uts46_remap` function of the [Python idna](https://pypi.org/project/idna/) library.
 
 #### `ip4`
 

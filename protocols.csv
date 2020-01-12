@@ -5,10 +5,10 @@ code,	size,	name,	codec,	comment
 33,	16,	dccp,	uint16be,
 41,	128,	ip6,	ip6,
 42,	V,	ip6zone,	?,	rfc4007 IPv6 zone
-53,	V,	dns,	idna,	domain name resolvable to both IPv6 and IPv4 addresses
-54,	V,	dns4,	idna,	domain name resolvable only to IPv4 addresses
-55,	V,	dns6,	idna,	domain name resolvable only to IPv6 addresses
-56,	V,	dnsaddr,	idna,
+53,	V,	dns,	domain,	domain name resolvable to both IPv6 and IPv4 addresses
+54,	V,	dns4,	domain,	domain name resolvable only to IPv4 addresses
+55,	V,	dns6,	domain,	domain name resolvable only to IPv6 addresses
+56,	V,	dnsaddr,	domain,
 132,	16,	sctp,	uint16be,
 301,	0,	udt,	–,
 302,	0,	utp,	–,
