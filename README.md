@@ -125,15 +125,13 @@ and functions for performing the below conversions rather than rolling your own.
 
 #### `fspath`
 
-Encodes the given Unicode string using the system's local file system encoding.
-On Windows this encoding likely being UTF-16, while being UTF-8 on most other
-systems. It is up to the library to figure out the best encoding value for
-these kinds of strings.
+Encodes a local file system path with unspecified binary encoding. On platforms
+not using POSIX-style forward slashes (`/`) for delimiting individual path
+labels, such as Windows, implementations should automatically convert such
+paths from their POSIX representation as necessary.
 
- * String → Binary: `str.encode(SYSTEM_FILESYSTEM_ENCODING)`
- * Binary → String: `bytes.decode(SYSTEM_FILESYSTEM_ENCODING)`
-
-Protocols using the `fspath` encoding must not be shared between different hosts.
+Protocols using the `fspath` encoding are only valid for the system they were
+created for and must not be shared between different hosts.
 
 #### `domain`
 
