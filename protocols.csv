@@ -19,11 +19,12 @@ code,	size,	name,	comment
 445,	296,	onion3,
 446,	V,	garlic64,
 447,	V,	garlic32,
+448,	0,	tls,	Transport Layer Security
 460,	0,	quic,
-480,	0,	http,
-443,	0,	https,
-477,	0,	ws,
-478,	0,	wss,
+480,	0,	http,	HyperText Transfer Protocol
+443,	0,	https,	Deprecated alias for /tls/http
+477,	0,	ws,	WebSockets
+478,	0,	wss,	Deprecated alias for /tls/ws
 479,	0,	p2p-websocket-star,
 277,	0,	p2p-stardust,
 275,	0,	p2p-webrtc-star,
