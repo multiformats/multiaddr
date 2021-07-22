@@ -20,6 +20,7 @@ code,	size,	name,	comment
 446,	V,	garlic64,
 447,	V,	garlic32,
 448,	0,	tls,	Transport Layer Security
+454,  0,  noise,
 460,	0,	quic,
 480,	0,	http,	HyperText Transfer Protocol
 443,	0,	https,	Deprecated alias for /tls/http
