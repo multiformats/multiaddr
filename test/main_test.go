@@ -135,7 +135,7 @@ func theComponentsAre(tbl *gherkin.DataTable) error {
 		return fmt.Errorf("expected %d row, got %d", expected, actual)
 	}
 
-	for i, _ := range table {
+	for i := range table {
 		actual, ok := table[i]["string"]
 		if ok {
 			expected := theMaddr.Components[i].String
