@@ -133,7 +133,6 @@ TODO: most of these are way underspecified
 - [kotlin-multiaddr](https://github.com/changjiashuai/kotlin-multiaddr) - stable
 - [go-multiaddr](https://github.com/multiformats/go-multiaddr) - stable
   - [go-multiaddr-dns](https://github.com/multiformats/go-multiaddr-dns)
-  - [go-multiaddr-net](https://github.com/multiformats/go-multiaddr-net)
 - [java-multiaddr](https://github.com/multiformats/java-multiaddr) - stable
 - [haskell-multiaddr](https://github.com/MatrixAI/haskell-multiaddr) - stable
 - [py-multiaddr](https://github.com/multiformats/py-multiaddr) - stable
