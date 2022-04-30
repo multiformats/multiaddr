@@ -66,7 +66,7 @@ Multiaddr was originally [thought up by @jbenet](https://github.com/jbenet/rando
 
 Although multiaddrs are self-describing, it's possible to further encapsulate them based on context.
 For example in a web browser, it's obvious that, given a hostname, HTTP should be spoken.
-The specifics of this HTTP connection are not important (expect maybe the use of TLS),
+The specifics of this HTTP connection are not important (except maybe the use of TLS),
 and will be derived from the browser's capabilities and configuration.
 
 1. example.com/index.html
