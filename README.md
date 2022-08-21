@@ -112,7 +112,7 @@ and [protocols/](protocols/) for specifications of the currently supported proto
 
 TODO: most of these are way underspecified
 
-- /ip4, /ip6
+- [/ip4](protocols/IP4.md), /ip6
 - /ipcidr
 - /dns4, /dns6
 - [/dnsaddr](protocols/DNSADDR.md)
