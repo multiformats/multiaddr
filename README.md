@@ -114,7 +114,7 @@ TODO: most of these are way underspecified
 
 - [/ip4](protocols/IP4.md), [/ip6](protocols/IP6.md)
 - /ipcidr
-- /dns4, /dns6
+- [/dns](protocols/DNS.md), [/dns4](protocols/DNS4.md), [/dns6](protocols/DNS6.md)
 - [/dnsaddr](protocols/DNSADDR.md)
 - /tcp
 - /udp
