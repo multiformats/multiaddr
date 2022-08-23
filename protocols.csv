@@ -1,8 +1,6 @@
 code,	size,	name,	comment
 4,	32,	ip4,
 6,	16,	tcp,
-8,	V,	ipfs,	IPFS (previously code 421 to descibe peers but name replaced by 'p2p')
-9,	V,	ipns,	IPNS
 33,	16,	dccp,
 41,	128,	ip6,
 42,	V,	ip6zone,	rfc4007 IPv6 zone
@@ -23,6 +21,7 @@ code,	size,	name,	comment
 400,	V,	unix,
 406,	?,	thread, Textile Thread
 421,	V,	p2p,	preferred over /ipfs
+421,	V,	ipfs,	backwards compatibility; equivalent to /p2p
 443,	0,	https,	Deprecated alias for /tls/http
 444,	96,	onion,
 445,	296,	onion3,
