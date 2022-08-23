@@ -4,7 +4,7 @@ code,	size,	name,	comment
 33,	16,	dccp,
 41,	128,	ip6,
 42,	V,	ip6zone,	rfc4007 IPv6 zone
-43,	8,	ipcidr, CIDR mask for IP addresses
+43,	8,	ipcidr, [NOT REGISTERED AS MULTICODEC] CIDR mask for IP addresses
 53,	V,	dns,  domain name resolvable to both IPv6 and IPv4 addresses
 54,	V,	dns4, domain name resolvable only to IPv4 addresses
 55,	V,	dns6, domain name resolvable only to IPv6 addresses
@@ -19,6 +19,7 @@ code,	size,	name,	comment
 301,	0,	udt,
 302,	0,	utp,
 400,	V,	unix,
+406	?,	thread, Textile Thread
 421,	V,	p2p,	preferred over /ipfs
 421,	V,	ipfs,	backwards compatibility; equivalent to /p2p
 443,	0,	https,	Deprecated alias for /tls/http
@@ -35,4 +36,4 @@ code,	size,	name,	comment
 478,	0,	wss,	Deprecated alias for /tls/ws
 479,	0,	p2p-websocket-star,
 480,	0,	http,	HyperText Transfer Protocol
-777,	V,      memory, in memory transport for self-dialing and testing; arbitrary 
+777,	V,      memory, [NOT REGISTERED AS MULTICODEC] in memory transport for self-dialing and testing; arbitrary 
