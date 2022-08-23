@@ -1,11 +1,11 @@
 # multiaddr
 
+Composable and future-proof network addresses
+
 [![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](https://protocol.ai)
 [![](https://img.shields.io/badge/project-multiformats-blue.svg?style=flat-square)](https://github.com/multiformats/multiformats)
 [![](https://img.shields.io/badge/freenode-%23ipfs-blue.svg?style=flat-square)](https://webchat.freenode.net/?channels=%23ipfs)
 [![](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
-
-> Composable and future-proof network addresses
 
 - [Introduction](#introduction)
 - [Use cases](#use-cases)
@@ -110,22 +110,38 @@ TODO: specify the decoding (string to byte-array) procedure
 See [protocols.csv](protocols.csv) for a list of protocol codes and names,
 and [protocols/](protocols/) for specifications of the currently supported protocols.
 
-TODO: most of these are way underspecified
-
-- [/ip4](protocols/IP4.md), [/ip6](protocols/IP6.md)
-- /ipcidr
-- [/dns](protocols/DNS.md), [/dns4](protocols/DNS4.md), [/dns6](protocols/DNS6.md)
+- [/ip4](protocols/IP4.md)
+- [/tcp](protocols/TCP.md)
+- [/dccp](protocols/DCCP.md)
+- [/ip6](protocols/IP6.md)
+- [/ip6zone](protocols/IP6ZONE.md)
+- [/ip6cidr](protocols/IP6CIDR.md)
+- [/dns](protocols/DNS.md)
+- [/dns4](protocols/DNS4.md)
+- [/dns6](protocols/DNS6.md)
 - [/dnsaddr](protocols/DNSADDR.md)
-- /tcp
-- /udp
-- /utp
-- /tls
-- /ws, /wss
-- /ipfs
-- /p2p-circuit
-- /p2p-webrtc-star, /p2p-webrtc-direct
-- /p2p-websocket-star
-- /onion
+- [/sctp](protocols/SCTP.md)
+- [/udp](protocols/UDP.md)
+- [/webrtc](protocols/WEBRTC.md)
+- [/udt](protocols/UDT.md)
+- [/utp](protocols/UTP.md)
+- [/unix](protocols/UNIX.md)
+- [/thread](protocols/THREAD.md)
+- [/p2p](protocols/P2P.md)
+- [/https](protocols/HTTPS.md)
+- [/onion](protocols/ONION.md)
+- [/onion3](protocols/ONION3.md)
+- [/garlic64](protocols/GARLIC64.md)
+- [/garlic32](protocols/GARLIC32.md)
+- [/tls](protocols/TLS.md)
+- [/noise](protocols/NOISE.md)
+- [/quic](protocols/QUIC.md)
+- [/webtransport](protocols/WEBTRANSPORT.md)
+- [/certhash](protocols/CERTHASH.md)
+- [/ws](protocols/WS.md)
+- [/wss](protocols/WSS.md)
+- [/http](protocols/HTTP.md)
+- [/memory](protocols/MEMORY.md)
 
 
 ## Implementations
