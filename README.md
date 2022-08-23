@@ -112,6 +112,8 @@ and [protocols/](protocols/) for specifications of the currently supported proto
 
 - [/ip4](protocols/IP4.md)
 - [/tcp](protocols/TCP.md)
+- [/ipfs](protocols/IPFS.md)
+- [/ipns](protocols/IPNS.md)
 - [/dccp](protocols/DCCP.md)
 - [/ip6](protocols/IP6.md)
 - [/ip6zone](protocols/IP6ZONE.md)
