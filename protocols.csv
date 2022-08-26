@@ -10,6 +10,8 @@ code,	size,	name,	comment
 55,	V,	dns6, domain name resolvable only to IPv6 addresses
 56,	V,	dnsaddr,
 132,	16,	sctp,
+227,	V,	ipfs,	IPFS; holding a CID
+229,	V	ipns,	IPNS; holding a CID
 273,	16,	udp,
 275,	0,	p2p-webrtc-star,
 276,	0,	p2p-webrtc-direct,
@@ -20,8 +22,7 @@ code,	size,	name,	comment
 302,	0,	utp,
 400,	V,	unix,
 406,	?,	thread, Textile Thread
-421,	V,	p2p,	preferred over /ipfs
-421,	V,	ipfs,	backwards compatibility; equivalent to /p2p
+421,	V,	p2p,	P2P; holding a PeerId
 443,	0,	https,	Deprecated alias for /tls/http
 444,	96,	onion,
 445,	296,	onion3,
