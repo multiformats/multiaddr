@@ -1,6 +1,6 @@
 # `dns6`
 
-`dns6` is a protocol that defines which domain name should be used, but only by resolving it to a IPv6 address.
+`dns6` is a protocol that defines which domain name should be used, but only by resolving it to IPv6 addresses.
 
 ## Representation Format
 

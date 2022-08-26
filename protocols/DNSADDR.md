@@ -1,6 +1,6 @@
 # `dnsaddr`
 
-`dnsaddr` is a protocol that instructs the resolver to lookup multiaddr(s) in DNS TXT records for the domain name in it's value section.
+`dnsaddr` is a protocol that instructs the resolver to lookup multiaddrs in DNS TXT records for the domain name in it's value section.
 
 To resolve a `dnsaddr` multiaddr, the domain name in the value section must first be prefixed with `_dnsaddr.`. Then a DNS query to lookup TXT records for the domain must be made. There may be multiple DNS TXT records for the domain. Valid `dnsaddr` TXT records begin with `dnsaddr=`, followed by a single multiaddr. Recursive lookups are allowed.
 

@@ -1,6 +1,6 @@
 # `dns4`
 
-`dns4` is a protocol that defines which domain name should be used, but only by resolving it to a IPv4 address.
+`dns4` is a protocol that defines which domain name should be used, but only by resolving it to IPv4 addresses.
 
 ## Representation Format
 
