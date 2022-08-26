@@ -6,11 +6,11 @@
 
 ### Human-readable
 
-See the PeerId specification.
+See the [PeerId](https://docs.libp2p.io/concepts/peer-id/) specification.
 	
 ### Binary
 
-See the PeerId specification.
+See the [PeerId](https://docs.libp2p.io/concepts/peer-id/) specification.
 
 ## Binary Size
 
