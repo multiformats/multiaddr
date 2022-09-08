@@ -44,6 +44,44 @@ Multiaddr solves these problems by modelling network addresses as arbitrary enca
 
 Multiaddr was originally [thought up by @jbenet](https://github.com/jbenet/random-ideas/issues/11).
 
+## Interpreting multiaddrs
+
+Multiaddrs are parsed from left to right, but they should be interpreted right
+to left. Each component of a multiaddr wraps all the left components in its
+context. For example, the multiaddr `/dns4/example.com/tcp/1234/tls/ws/tls`
+(ignore the double encryption for now) is interpreted by taking the first `tls`
+component from the right and interpreting it as the libp2p security protocol to
+use for the connection, then passing the rest of the multiaddr to the websocket
+transport to create the websocket connection. The websocket transport sees
+`/dns4/example.com/tcp/1234/tls/ws/` and interprets the `tls` in this context to
+mean that this is going to be a secure websocket connection. The websocket
+transport also gets the host to dial along with the tcp port from the rest of
+the multiaddr.
+
+Components to the right can also provide parameters to components to the left,
+since they are in charge of the rest of the multiaddr's interpretation. For
+example, in `/ip4/1.2.3.4/tcp/1234/tls/p2p/QmFoo` the `p2p` component has the
+value of the peer id and it passes it to the next component, in this case the
+`tls` security protocol, as the expected peer id for this connection. Another
+example is `/ip4/.../p2p/QmR/p2p-circuit/p2p/QmA`, here `p2p/QmA` is passed to
+`p2p-circuit` and then the `p2p-circuit` component knows it needs to use the
+rest of the multiaddr as the information to connect to the relay node.
+
+This enables nesting and arbitrary parameters. A component can parse
+arbitrary data with some encoding and pass it as a parameter to the next
+component of the multiaddr. For example, we could reference a specific HTTP path
+by composing `path` and `urlencode` components along with an `http` component.
+This would look like
+`/dns4/example.com/http/path/percentencode/somepath%2ftosomething`. The
+`percentencode` parses the data and passes it as a parameter to `path`, which
+passes it as a named parameter (`path=somepath/tosomething`). A user may not
+like percentencode for their use case and may prefer to use `lenprefixencode` to
+have the multiaddr instead look like
+`/dns4/example.com/http/path/lenprefixencode/20_somepath/tosomething`. This
+would work the same and require no changes to the `path` or `http` component.
+It's important to note that the binary representation of the data in
+`percentencode` and `lenprefixencode` would be the same. The only difference is
+how it appears in the human-readable representation.
 
 ## Use cases
 
