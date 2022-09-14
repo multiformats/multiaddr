@@ -3,5 +3,5 @@
 
 ## Before Merge
 <!-- Anything that's needed before we merge this? -->
-- [ ] Allow 24 hours for community input
+- [ ] Allow at least 24 hours for community input
 - [ ] If this is a new protocol, has the change been applied to https://github.com/multiformats/multicodec as well?
