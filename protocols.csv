@@ -37,3 +37,4 @@ code,	size,	name,	comment
 280,	0,	webrtc, ICE-lite webrtc transport
 290,	0,	p2p-circuit,
 777,	V, memory, in memory transport for self-dialing and testing; arbitrary 
+2782, V, srv, See RFC 2782 (format: /srv/<servicename>/<tcp/udp/protocol>/<domain>, example: /srv/coolservice/tcp/domain.example.com)
