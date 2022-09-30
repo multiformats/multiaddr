@@ -1,0 +1,22 @@
+name: Check that we are in sync with the Multicodec repo
+on: [pull_request]
+jobs:
+  check-multicodec-in-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Checkout tools repo
+        uses: actions/checkout@v3
+        with:
+          repository: multiformats/multicodec
+          path: multicodec
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - name: Install babashka
+        uses: just-sultanov/setup-babashka@v2
+        with:
+          version: '0.4.6'
+      - name: Run checker
+        run: bb multicodec-sync-check/check.clj
