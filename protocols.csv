@@ -26,6 +26,7 @@ code,	size,	name,	comment
 460,	0,	quic,
 465,	0,	webtransport,
 466,    V,	certhash,
+481,  V,  host-header, HTTP host header
 480,	0,	http,	HyperText Transfer Protocol
 443,	0,	https,	Deprecated alias for /tls/http
 477,	0,	ws,	WebSockets
