@@ -142,7 +142,7 @@ TODO: most of these are way underspecified
 - [net-ipfs-core](https://github.com/richardschneider/net-ipfs-core) - stable
 - [swift-multiaddr](https://github.com/lukereichold/swift-multiaddr) - stable
 - [elixir-multiaddr](https://github.com/aratz-lasa/ex_multiaddr) - alpha
-- `multiaddr` sub-module of Python module [multiformats](//github.com/hashberg-io/multiformats) - alpha
+- `multiaddr` sub-module of Python module [multiformats](https://github.com/hashberg-io/multiformats) - alpha
 
 TODO: reconsider these alpha/beta/stable labels
 
