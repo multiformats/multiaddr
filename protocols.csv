@@ -23,10 +23,10 @@ code,	size,	name,	comment
 448,	0,	tls,	Transport Layer Security
 449,	V,	sni,	Server Name Indication RFC 6066 § 3
 454,	0,	noise,
-460,  0,	quic,
-461,  0,	quic-v1,
+460,	0,	quic,
+461,	0,	quic-v1,
 465,	0,	webtransport,
-466,  V,	certhash,
+466,	V,	certhash,
 480,	0,	http,	HyperText Transfer Protocol
 443,	0,	https,	Deprecated alias for /tls/http
 477,	0,	ws,	WebSockets
