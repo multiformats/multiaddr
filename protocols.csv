@@ -36,5 +36,6 @@ code,	size,	name,	comment
 275,	0,	p2p-webrtc-star,
 276,	0,	p2p-webrtc-direct,
 280,	0,	webrtc, ICE-lite webrtc transport
+281, 	0,	webrtc-w3c, webrtc transport where connection establishment is according to w3c spec
 290,	0,	p2p-circuit,
 777,	V, memory, in memory transport for self-dialing and testing; arbitrary 
