@@ -31,10 +31,10 @@ code,	size,	name,	comment
 443,	0,	https,	Deprecated alias for /tls/http
 477,	0,	ws,	WebSockets
 478,	0,	wss,	Deprecated alias for /tls/ws
-479,	0,	p2p-websocket-star,
-277,	0,	p2p-stardust,
-275,	0,	p2p-webrtc-star,
-276,	0,	p2p-webrtc-direct,
+479,	0,	p2p-websocket-star, Deprecated
+277,	0,	p2p-stardust, Deprecated
+275,	0,	p2p-webrtc-star, Deprecated - Use webrtc or webrtc-direct instead
+276,	0,	p2p-webrtc-direct, Deprecated - Use webrtc or webrtc-direct instead
 280,	0,	webrtc-direct, ICE-lite webrtc transport with SDP munging during connection establishment and without use of a STUN server
 281, 	0,	webrtc, webrtc transport where connection establishment is according to w3c spec
 290,	0,	p2p-circuit,
