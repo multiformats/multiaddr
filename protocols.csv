@@ -31,6 +31,9 @@ code,	size,	name,	comment
 443,	0,	https,	Deprecated alias for /tls/http
 477,	0,	ws,	WebSockets
 478,	0,	wss,	Deprecated alias for /tls/ws
+481,	0,	socks4,	"SOCKS4 proxy, including the SOCKS4a domain name addressing variant (https://www.openssh.com/txt/socks4a.protocol)"
+482,	0,	socks5,	SOCKS5 proxy (RFC1928)
+483,	0,	http-tunnel,	HTTP tunneling proxy (RFC7231#4.3.6); combine with /tls for HTTPS proxies
 479,	0,	p2p-websocket-star,
 277,	0,	p2p-stardust,
 275,	0,	p2p-webrtc-star,
