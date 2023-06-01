@@ -39,3 +39,4 @@ code,	size,	name,	comment
 281, 	0,	webrtc, webrtc transport where connection establishment is according to w3c spec
 290,	0,	p2p-circuit,
 777,	V, memory, in memory transport for self-dialing and testing; arbitrary 
+37,	V, percentencode, percent escaped encoding for path elements. / and % are percent encoded in the string representation.
