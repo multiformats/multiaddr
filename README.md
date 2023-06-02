@@ -72,13 +72,13 @@ arbitrary data with some encoding and pass it as a parameter to the next
 component of the multiaddr. For example, we could reference a specific HTTP path
 by composing `path` and `urlencode` components along with an `http` component.
 This would look like
-`/dns4/example.com/http/path/percentencode/somepath%2ftosomething`. The
+`/dns4/example.com/http/GET/path/percentencode/somepath%2ftosomething`. The
 `percentencode` parses the data and passes it as a parameter to `path`, which
-passes it as a named parameter (`path=somepath/tosomething`). A user may not
+passes it as a named parameter (`path=somepath/tosomething`) to a `GET` request. A user may not
 like percentencode for their use case and may prefer to use `lenprefixencode` to
 have the multiaddr instead look like
-`/dns4/example.com/http/path/lenprefixencode/20_somepath/tosomething`. This
-would work the same and require no changes to the `path` or `http` component.
+`/dns4/example.com/http/GET/path/lenprefixencode/20_somepath/tosomething`. This
+would work the same and require no changes to the `path` or `GET` component.
 It's important to note that the binary representation of the data in
 `percentencode` and `lenprefixencode` would be the same. The only difference is
 how it appears in the human-readable representation.
