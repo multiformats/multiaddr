@@ -14,9 +14,11 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - name: Install babashka
-        uses: just-sultanov/setup-babashka@v2
-        with:
-          version: '0.4.6'
       - name: Run checker
-        run: bb multicodec-sync-check/check.clj
+        uses: pl-strflt/docker-container-action@v1
+        with:
+          repository: babashka/babashka
+          ref: v0.4.6
+          tag: 0.4.6-alpine
+          args: multicodec-sync-check/check.clj
+          docker-registry-url: https://docker.io
