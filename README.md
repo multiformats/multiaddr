@@ -175,7 +175,7 @@ TODO: most of these are way underspecified
 - [java-multiaddr](https://github.com/multiformats/java-multiaddr) - stable
 - [haskell-multiaddr](https://github.com/MatrixAI/haskell-multiaddr) - stable
 - [py-multiaddr](https://github.com/multiformats/py-multiaddr) - stable
-- [rust-multiaddr](https://github.com/multiformats/rust-multiaddr) - beta
+- [rust-multiaddr](https://github.com/multiformats/rust-multiaddr) - stable
 - [cs-multiaddress](https://github.com/multiformats/cs-multiaddress) - alpha
 - [net-ipfs-core](https://github.com/richardschneider/net-ipfs-core) - stable
 - [swift-multiaddr](https://github.com/lukereichold/swift-multiaddr) - stable
