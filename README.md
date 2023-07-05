@@ -181,6 +181,7 @@ TODO: most of these are way underspecified
 - [swift-multiaddr](https://github.com/lukereichold/swift-multiaddr) - stable
 - [elixir-multiaddr](https://github.com/aratz-lasa/ex_multiaddr) - alpha
 - `multiaddr` sub-module of Python module [multiformats](https://github.com/hashberg-io/multiformats) - alpha
+- [dart-multiaddr](https://github.com/YogiLiu/dart_multiaddr) - alpha
 
 TODO: reconsider these alpha/beta/stable labels
 
