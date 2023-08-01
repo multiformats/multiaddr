@@ -169,7 +169,6 @@ TODO: most of these are way underspecified
 ## Implementations
 
 - [js-multiaddr](https://github.com/multiformats/js-multiaddr) - stable
-- [kotlin-multiaddr](https://github.com/changjiashuai/kotlin-multiaddr) - stable
 - [go-multiaddr](https://github.com/multiformats/go-multiaddr) - stable
   - [go-multiaddr-dns](https://github.com/multiformats/go-multiaddr-dns)
 - [java-multiaddr](https://github.com/multiformats/java-multiaddr) - stable
@@ -182,7 +181,9 @@ TODO: most of these are way underspecified
 - [elixir-multiaddr](https://github.com/aratz-lasa/ex_multiaddr) - alpha
 - `multiaddr` sub-module of Python module [multiformats](https://github.com/hashberg-io/multiformats) - alpha
 - [dart-multiaddr](https://github.com/YogiLiu/dart_multiaddr) - alpha
-- `multiaddr` part of Kotlin project [multiformat](https://github.com/erwin-kok/multiformat) - alpha
+- Kotlin
+  - [kotlin-multiaddr](https://github.com/changjiashuai/kotlin-multiaddr) - stable
+  - `multiaddr` part of Kotlin project [multiformat](https://github.com/erwin-kok/multiformat) - alpha
 
 TODO: reconsider these alpha/beta/stable labels
 
