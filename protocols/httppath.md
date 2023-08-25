@@ -19,11 +19,14 @@ representation to avoid ambiguities over which characters were escaped.
 
 ## Reserved Characters
 
-| Character | Reason                        |
-| --------- | ----------------------------- |
-| /         | Multiaddr component separator |
-| %         | Percent encoding indicator    |
-| ?         | Marks the end of an HTTP path |
+| Character | Reason                                                                                               |
+| --------- | ---------------------------------------------------------------------------------------------------- |
+| `/`       | Multiaddr component separator                                                                        |
+| `%`       | Percent encoding indicator                                                                           |
+| `?`       | Marks the end of an HTTP path                                                                        |
+| `#`       | Reserved gen-delim character by [rfc3986](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2) |
+| `[`       | Reserved gen-delim character by [rfc3986](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2) |
+| `]`       | Reserved gen-delim character by [rfc3986](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2) |
 
 ## Usage
 
