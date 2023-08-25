@@ -39,5 +39,5 @@ representation to avoid ambiguities over which characters were escaped.
 The `/httppath` component can also be appended to just the `/p2p/...` component, and rely on a separate peer discovery mechanism to actually identify the peer's address:
 
 ```
-/ip4/1.2.3.4/tcp/443/tls/http/p2p/12D.../httppath/.well-known%2Flibp2p
+/p2p/12D.../httppath/.well-known%2Flibp2p
 ```
