@@ -18,8 +18,6 @@
 - [Contribute](#contribute)
 - [License](#license)
 
-Captain: [@lgierth](https://github.com/lgierth)
-
 
 ## Introduction
 
