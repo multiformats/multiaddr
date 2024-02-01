@@ -122,7 +122,7 @@ but only with multiaddr do we have a way of consistently addressing these networ
 
 ## Specification
 
-- Human-readable multiaddr: `(/<protoName string>/<value string>)+`
+- Human-readable multiaddr: `(/<protoName string>(/<value string>)?)+`
   - Example: `/ip4/127.0.0.1/udp/1234`
 - Machine-readable multiaddr: `(<protoCode uvarint><value []byte>)+`
   - Same example: `0x4 0x7f 0x0 0x0 0x1 0x91 0x2 0x4 0xd2`
