@@ -28,6 +28,7 @@ code,	size,	name,	comment
 465,	0,	webtransport,
 466,	V,	certhash,
 480,	0,	http,	HyperText Transfer Protocol
+481,	V,	http-path,	Percent-encoded path to an HTTP resource
 443,	0,	https,	Deprecated alias for /tls/http
 477,	0,	ws,	WebSockets
 478,	0,	wss,	Deprecated alias for /tls/ws
