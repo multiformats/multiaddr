@@ -7,16 +7,18 @@
 
 > Composable and future-proof network addresses
 
-- [Introduction](#introduction)
-- [Use cases](#use-cases)
-  - [Encapsulation based on context](#encapsulation-based-on-context)
-- [Specification](#specification)
-  - [Encoding](#encoding)
-  - [Decoding](#decoding)
-- [Protocols](#protocols)
-- [Implementations](#implementations)
-- [Contribute](#contribute)
-- [License](#license)
+- [multiaddr](#multiaddr)
+  - [Introduction](#introduction)
+  - [Interpreting multiaddrs](#interpreting-multiaddrs)
+  - [Use cases](#use-cases)
+    - [Encapsulation based on context](#encapsulation-based-on-context)
+  - [Specification](#specification)
+    - [Encoding (Bytes -\> String)](#encoding-bytes---string)
+    - [Decoding (String -\> Bytes)](#decoding-string---bytes)
+  - [Protocols](#protocols)
+  - [Implementations](#implementations)
+  - [Contribute](#contribute)
+  - [License](#license)
 
 
 ## Introduction
@@ -132,13 +134,33 @@ Multiaddr and all other multiformats use unsigned varints (uvarint).
 Read more about it in [multiformats/unsigned-varint](https://github.com/multiformats/unsigned-varint).
 
 
-### Encoding
+### Encoding (Bytes -> String)
 
-TODO: specify the encoding (byte-array to string) procedure
+1. Read the first byte and find the corresponding protocol.
+2. Read bytes that follow according to the rules defined by that protocol. This is the value for that protocol.
+   1. Generally this will be a fixed number of bytes, or
+   2. a varint length prefixed number of bytes.
+   3. Some protocols have no value. This is equivalent to 0 bytes.
+3. The protocol + value combination is a component.
+4. Repeat for the remaining bytes to gather all the components.
+5. For each component create the string `/<protocol-name>/<protocol-value>` where protocol-value is the string form of the component's bytes as defined by that protocol.
+   1. If the component has no value, the string is `/<protocol-name>`
+6. Join all the strings together.
 
-### Decoding
+### Decoding (String -> Bytes)
 
-TODO: specify the decoding (string to byte-array) procedure
+Given a multiaddr string and an output byte buffer.
+
+1. Discard the leading `/`.
+2. Parse the protocol from the name until the next `/`.
+3. Push the protocol's varint-encoded code to the byte buffer.
+4. If the protocol has a value:
+   1. Read the value by reading the next part of the string until the next `/`.
+   2. Convert this value into bytes per the rules of the protocol.
+   3. Append these bytes to the byte buffer
+5. Repeat until you reach the end of the string
+
+The byte buffer will contain the machine-readable form of the multiaddr.
 
 
 ## Protocols
