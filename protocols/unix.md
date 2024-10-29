@@ -23,8 +23,8 @@ Multiaddr string form.
 | /dir/file.socket/p2p/12D... | `/unix/dir%2Ffile.socket/p2p/12D...`    |
 | /tmp/foo/../bar             | `/unix/tmp%2Ffoo%2F..%2Fbar`            |
 | /%2F                        | `/unix/%252F`                           |
-| a%20space                   | `/unix/a%2520space`                     |
-| a%2Fslash                   | `/unix/a%252Fslash`                     |
+| /a%20space                  | `/unix/a%2520space`                     |
+| /a%2Fslash                  | `/unix/a%252Fslash`                     |
 
 ## Usage
 
