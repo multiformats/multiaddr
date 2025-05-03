@@ -54,6 +54,6 @@
 
 
 (when (> (count missing-multicodecs) 0)
-  (println "Some protocols in the multiadddr table are not registered with multicodecs:")
+  (println "Some protocols in the multiaddr table are not registered with multicodecs:")
   (clojure.pprint/print-table missing-multicodecs)
   (System/exit 1))
