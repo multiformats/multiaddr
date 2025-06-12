@@ -18,13 +18,14 @@ Multiaddr string form.
 | Unix Path                   | Multiaddr string form                   |
 | --------------------------- | --------------------------------------- |
 | /                           | `/unix/%2F`                             |
-| /file.socket                | `/unix/file.socket`                     |
-| /dir/file.socket            | `/unix/dir%2Ffile.socket`               |
-| /dir/file.socket/p2p/12D... | `/unix/dir%2Ffile.socket/p2p/12D...`    |
-| /tmp/foo/../bar             | `/unix/tmp%2Ffoo%2F..%2Fbar`            |
+| /file.socket                | `/unix/%2Ffile.socket`                  |
+| /dir/file.socket            | `/unix/%2Fdir%2Ffile.socket`            |
+| /dir/file.socket/p2p/12D... | `/unix/%2Fdir%2Ffile.socket/p2p/12D...` |
+| /tmp/foo/../bar             | `/unix/%2Ftmp%2Ffoo%2F..%2Fbar`         |
 | /%2F                        | `/unix/%252F`                           |
-| /a%20space                  | `/unix/a%2520space`                     |
-| /a%2Fslash                  | `/unix/a%252Fslash`                     |
+| /a%20space                  | `/unix/%2Fa%2520space`                  |
+| /a%2Fslash                  | `/unix/%2Fa%252Fslash`                  |
+| socket                      | `/unix/socket`                          |
 
 ## Usage
 
@@ -32,5 +33,5 @@ Multiaddr string form.
 appear anywhere, for example in the case where we route through some sort of
 proxy server or SSH tunnel.
 
-The leading `/` character of the path can be omitted, unless it is the only
-character in the path, in which case it must be escaped as normal.
+The absence of a `/` character at the start of the decoded address indicates a
+relative path, otherwise the path is absolute.
