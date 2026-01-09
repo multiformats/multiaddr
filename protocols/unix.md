@@ -1,6 +1,6 @@
 # `unix`
 
-This protocol encodes a UNIX-domain socket path to a resource. In the string
+This protocol encodes a Unix-domain socket path to a resource. In the string
 representation, the path is encoded in a way consistent with a single URI Path
 segment per [RFC 3986 Section 3.3](https://datatracker.ietf.org/doc/html/rfc3986#autoid-23).
 
@@ -12,7 +12,7 @@ representation to avoid ambiguities over which characters were escaped.
 
 ## Examples
 
-The following is a table of examples converting some common UNIX paths to their
+The following is a table of examples converting some common Unix paths to their
 Multiaddr string form.
 
 | Unix Path                   | Multiaddr string form                   |
@@ -35,7 +35,7 @@ proxy server or SSH tunnel.
 
 # `unix-abstract`
 
-This protocol encodes a Linux UNIX-domain abstract socket address,
+This protocol encodes a Linux Unix-domain abstract socket address,
 which are distinguished by their first byte being 0.
 It is encoded the same way as `unix`;
 the marker byte is not part of the path.
@@ -53,7 +53,7 @@ for display only.
 
 # `stream`, `seqpacket`, `dgram`
 
-These correspond to the *type* of UNIX-domain socket:
+These correspond to the *type* of Unix-domain socket:
 `SOCK_STREAM`, `SOCK_SEQPACKET`, `SOCK_DGRAM`.
 
 Previous versions of this specification did not contain these types;
