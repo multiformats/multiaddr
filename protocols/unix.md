@@ -10,6 +10,9 @@ representation, no encoding is needed as the value is length prefixed.
 When comparing multiaddrs, implementations should compare their binary
 representation to avoid ambiguities over which characters were escaped.
 
+The absence of a `/` character at the start of the decoded address indicates a
+relative path, otherwise the path is absolute.
+
 ## Examples
 
 The following is a table of examples converting some common Unix paths to their
