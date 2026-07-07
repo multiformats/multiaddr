@@ -40,3 +40,4 @@ code,	size,	name,	comment
 281, 	0,	webrtc, webrtc transport where connection establishment is according to w3c spec
 290,	0,	p2p-circuit,
 777,	V, memory, in memory transport for self-dialing and testing; arbitrary
+9849,	V,	ech, ECHConfigList per RFC 9849
