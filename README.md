@@ -7,16 +7,19 @@
 
 > Composable and future-proof network addresses
 
-- [Introduction](#introduction)
-- [Use cases](#use-cases)
-  - [Encapsulation based on context](#encapsulation-based-on-context)
-- [Specification](#specification)
-  - [Encoding](#encoding)
-  - [Decoding](#decoding)
-- [Protocols](#protocols)
-- [Implementations](#implementations)
-- [Contribute](#contribute)
-- [License](#license)
+- [multiaddr](#multiaddr)
+  - [Introduction](#introduction)
+  - [Interpreting multiaddrs](#interpreting-multiaddrs)
+  - [Use cases](#use-cases)
+    - [Encapsulation based on context](#encapsulation-based-on-context)
+  - [Specification](#specification)
+    - [Encoding](#encoding)
+    - [Decoding](#decoding)
+    - [URI](#uri)
+  - [Protocols](#protocols)
+  - [Implementations](#implementations)
+  - [Contribute](#contribute)
+  - [License](#license)
 
 
 ## Introduction
@@ -140,6 +143,24 @@ TODO: specify the encoding (byte-array to string) procedure
 
 TODO: specify the decoding (string to byte-array) procedure
 
+### URI
+
+It may be helpful in some contexts to reference a URI string. Especially in HTTP.
+
+Multiaddrs can be turned into a [URI](https://datatracker.ietf.org/doc/html/rfc3986) with the following rules:
+1. Convert the multiaddr into its human-readable string form.
+2. prepend `multiaddr:` to the string. This is the scheme.
+3. Ensure each component in the multiaddr conforms to path segment definition in [RFC 3986 Section 3.3](https://datatracker.ietf.org/doc/html/rfc3986#section-3.3).
+   1. Generally each component already conforms to this, but some multibase encodings do not conform (e.g. base256emoji). It is the caller's responsibility to make sure the generated multiaddr is a valid URI.
+
+Examples:
+
+```
+/ip4/127.0.0.1/tcp/4001 => multiaddr:/ip4/127.0.0.1/tcp/4001
+/ip4/127.0.0.1/tcp/4001/http => multiaddr:/ip4/127.0.0.1/tcp/4001/http
+/ip4/127.0.0.1/tcp/4001/http/http-path/foo%2fbar => multiaddr:/ip4/127.0.0.1/tcp/4001/http/http-path/foo%2fbar
+/ip6/::1/udp/4001/quic-v1/webtransport/certhash/uEiDP-eDbJAglAkW2jXNA3U7X4yA6PsDDlnK14GtWBZp-Hw/certhash/uEiAZKNFk76X2gYJqJyHXb0Sw6Tb2cIHvUXnyDTOLA_X8DA => multiaddr:/ip6/::1/udp/4001/quic-v1/webtransport/certhash/uEiDP-eDbJAglAkW2jXNA3U7X4yA6PsDDlnK14GtWBZp-Hw/certhash/uEiAZKNFk76X2gYJqJyHXb0Sw6Tb2cIHvUXnyDTOLA_X8DA
+```
 
 ## Protocols
 
