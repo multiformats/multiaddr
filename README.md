@@ -152,6 +152,8 @@ TODO: most of these are way underspecified
 - /ipcidr
 - /dns4, /dns6
 - [/dnsaddr](protocols/DNSADDR.md)
+- [/unix](protocols/unix.md)
+- [/unix-abstract](protocols/unix.md)
 - /tcp
 - /udp
 - /utp
