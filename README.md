@@ -182,6 +182,7 @@ TODO: most of these are way underspecified
 - Kotlin
   - [kotlin-multiaddr](https://github.com/changjiashuai/kotlin-multiaddr) - stable
   - `multiaddr` part of Kotlin project [multiformat](https://github.com/erwin-kok/multiformat) - alpha
+- [zig-multiaddr](https://github.com/zen-eth/multiformats-zig) - alpha
 
 TODO: reconsider these alpha/beta/stable labels
 
