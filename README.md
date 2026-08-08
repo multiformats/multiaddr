@@ -134,11 +134,28 @@ Read more about it in [multiformats/unsigned-varint](https://github.com/multifor
 
 ### Encoding
 
-TODO: specify the encoding (byte-array to string) procedure
+1. Initiate an empty string
+2. Check if there is input data left. If there is, read a unsigned varint to get the protocol code, else go to step 9.
+3. Check if protocol exists in the protocol list, else stop encoding and throw error.
+4. Get the name of the protocol from the protocol list and append it to the string of step 1, prefixed by a `/`.
+5. Get the size of the protocol value from the protocol list. If it is zero, go to step 2.
+6. If the size is fixed, read that amount of bytes, encode it using the procedures defined by the protocol and append it to the string of step 1, prefixed by a `/`. Then go to step 2.
+7. If the size is variable, read the size of the data. Usually, this is another unsigned varint, but protocols can decide otherwise.
+8. Read that amount of bytes from the remaining part of the data, encode it using the procedures defined by the protocol and append it to the string of step 1, prefixed by a `/`. Then go to step 2.
+9. Return the string from step 1.
 
 ### Decoding
 
-TODO: specify the decoding (string to byte-array) procedure
+1. Initiate an empty byte-array
+2. Get all segments that are prefixed by a `/` character.
+3. Start with the first segment.
+4. Check if the current segment contains a protocol name from the protocol list, else stop decoding an throw error.
+5. Get the code of the protocol, decode it to a unsigned varint and append it to the byte-array of step 1.
+6. If the size of that protocol is zero, go to the next segment. If that segment exist, go to step 4, else go to step 10.
+7. If the protocol size is variable and/or non-zero, then go to the next segment.
+8. Decode this segment using the procedures defined by the protocol and append it to the byte-array of step 1.
+9. Go to the next segment. If that segment exists, go to step 4, else go to step 10.
+10. Return the byte-array from step 1.
 
 
 ## Protocols
